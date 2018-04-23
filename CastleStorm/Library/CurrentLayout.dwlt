@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 51
+  controlID: 9
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 52
+  controlID: 10
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 53
+  controlID: 11
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -355,19 +355,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets/Models
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Models
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\s171681\Documents\Projects\CastleStorm\CastleStorm
+  m_LastProjectPath: C:\Users\s160697\Documents\CastleStorm\CastleStorm
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fc270000
-    m_LastClickedID: 10236
-    m_ExpandedIDs: 000000008a270000fc27000000ca9a3bffffff7f
+    m_SelectedIDs: 38280000
+    m_LastClickedID: 10296
+    m_ExpandedIDs: 00000000fe2700008628000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -395,7 +395,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008a270000
+    m_ExpandedIDs: 00000000fe27000086280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -513,9 +513,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: de4af5ff
-    m_LastClickedID: -701730
-    m_ExpandedIDs: 6812f8ff58fbffff00000000d6280000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 44f9ffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -566,14 +566,14 @@ MonoBehaviour:
     height: 553
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 2477.77682989374
+  lastFramingTime: 41.27318019830776
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 167.66122, y: -62.90281, z: -12.317337}
+    m_Target: {x: 135.69972, y: -5.0447464, z: 180.01935}
     speed: 2
-    m_Value: {x: 167.66122, y: -62.90281, z: -12.317337}
+    m_Value: {x: 135.69972, y: -5.0447464, z: 180.01935}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -597,13 +597,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.08610811, y: 0.91127515, z: -0.31858227, w: 0.24630967}
+    m_Target: {x: 0.20779389, y: 0.57963985, z: -0.1559496, w: 0.77234644}
     speed: 2
-    m_Value: {x: 0.08610811, y: 0.91127515, z: -0.31858227, w: 0.24630967}
+    m_Value: {x: 0.2077939, y: 0.5796399, z: -0.15594961, w: 0.7723465}
   m_Size:
-    m_Target: 141.03107
+    m_Target: 65.850624
     speed: 2
-    m_Value: 141.03107
+    m_Value: 65.850624
   m_Ortho:
     m_Target: 0
     speed: 2

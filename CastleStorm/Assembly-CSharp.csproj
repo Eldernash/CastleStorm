@@ -51,6 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\ObjectivePoint.cs" />
      <Compile Include="Assets\Scripts\Player\Camera.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
  <Reference Include="UnityEngine.UI">

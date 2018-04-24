@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class ObjectivePoint : MonoBehaviour {
 
     public int life = 10;
-
-
+    
     public Text text;
 	// Use this for initialization
 	void Start () {

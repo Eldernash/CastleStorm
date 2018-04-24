@@ -20,10 +20,9 @@ public class EnemySpawner : MonoBehaviour {
             
             Instantiate(prefab);
             timeRemaining = spawnTimer;
+            spawnAmount--;
         } else {
             timeRemaining -= 1 * Time.deltaTime;
         }
 	}
 }
-
-// m_BadBulletPool.Add(Instantiate<GameObject>(m_BadBulletPrefab));

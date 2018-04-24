@@ -46,14 +46,6 @@ public class Enemy : MonoBehaviour {
         if (agent.remainingDistance > agent.stoppingDistance) {
             controller.Move(agent.desiredVelocity * movementSpeed * Time.deltaTime);
         }
-
-        // checks if the player is close enough to chase, and chases them
-        //if (Vector3.Distance(controller.transform.position, secondaryTarget.position) < chaseRange) {
-        //    target = secondaryTarget;
-        //}
-        //else {
-        //    target = primaryTarget;
-        //}
 	}
 
     public void DetectsSecondary(bool detected) {
@@ -61,5 +53,13 @@ public class Enemy : MonoBehaviour {
             target = secondaryTarget;
         else
             target = primaryTarget;
+    }
+
+    public  void Damage(int damageTaken) {
+        health -= damageTaken;
+        if (health <= 0) {
+            Debug.Log("Hit 'im");
+            Destroy(gameObject);
+        }
     }
 }

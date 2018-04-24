@@ -7,15 +7,15 @@ public class ObjectivePoint : MonoBehaviour {
 
     public int life = 10;
     
-    public Text text;
+    public Text lifeDisplay;
 	// Use this for initialization
 	void Start () {
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        //text.text = life.ToString();
-	}
+        lifeDisplay.text = life.ToString();
+    }
 
     public void Damage(int damage) {
         if (life > 0)

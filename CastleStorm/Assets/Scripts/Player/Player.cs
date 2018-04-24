@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
@@ -17,10 +18,12 @@ public class Player : MonoBehaviour {
     public int maxEnemies = 10;
     public List<GameObject> enemies = new List<GameObject>();
     
+    public GameController gController;
+
     private bool isGrounded = false;
     private Vector3 moveDirection;
     private float verticalVelocity;
-
+    
     // Use this for initialization
     void Start () {
         controller = gameObject.GetComponent<CharacterController>();
@@ -45,8 +48,16 @@ public class Player : MonoBehaviour {
         }
         moveDirection.y = verticalVelocity;
         controller.Move(moveDirection * Time.deltaTime);
+
+        //healthText.text = health.ToString();
     }
     
+    public void Damage(int damageTaken) {
+        gController.health -= damageTaken;
+        if (gController.health <= 0) {
+            // you loose lmao
+        }
+    }
 
     private void OnTriggerEnter(Collider other) {
         if (other.transform.GetComponent<Enemy>() != null) {

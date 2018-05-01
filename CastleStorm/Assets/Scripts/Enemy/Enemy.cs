@@ -12,6 +12,10 @@ public class Enemy : MonoBehaviour {
     public float movementSpeed = 1;
     public int health = 1;
     public int damage = 1;
+    public AudioSource enemyAudio;
+    public AudioClip hit;
+    public AudioClip[] deathSounds = new AudioClip[3];
+    public int audioArrayNumber;
 
     public bool attacking = false;
     public float attackInterval = 1;
@@ -29,6 +33,7 @@ public class Enemy : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        enemyAudio = gameObject.GetComponent<AudioSource>();
         timer = attackInterval;
         gController = GameObject.Find("GameController");
         primaryTarget = gController.GetComponent<GameController>().EnemyPrimaryTarget;
@@ -64,9 +69,12 @@ public class Enemy : MonoBehaviour {
 
     public  void Damage(int damageTaken) {
         health -= damageTaken;
+        enemyAudio.PlayOneShot(hit);
         if (health <= 0) {
+            audioArrayNumber = Random.Range(0, 3);
             gController.GetComponent<GameController>().score++;
             Debug.Log("Hit 'im");
+            enemyAudio.PlayOneShot(deathSounds[audioArrayNumber]);
             Destroy(gameObject);
         }
     }

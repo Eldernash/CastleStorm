@@ -12,8 +12,10 @@ public class SwordAttack : MonoBehaviour {
 
     private Animation m_animation;
     private BoxCollider boxCollider;
-	// Use this for initialization
-	void Start () {
+    public AudioClip swing;
+    public AudioSource playerAudio;
+    // Use this for initialization
+    void Start () {
         timer = swingTime;
         m_animation = gameObject.GetComponent<Animation>();
         boxCollider = gameObject.GetComponent<BoxCollider>();
@@ -25,6 +27,7 @@ public class SwordAttack : MonoBehaviour {
             swinging = true;
             boxCollider.enabled = true;
             m_animation.Play("SwordSwing");
+            playerAudio.PlayOneShot(swing);
         }
 
         if (timer <= 0) {

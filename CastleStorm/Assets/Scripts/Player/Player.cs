@@ -23,6 +23,13 @@ public class Player : MonoBehaviour {
     private bool isGrounded = false;
     private Vector3 moveDirection;
     private float verticalVelocity;
+
+    //For Sounds
+    public AudioClip steps;
+    
+    public AudioClip deathsound;
+    public AudioSource playerAudio;
+
     
     // Use this for initialization
     void Start () {
@@ -37,9 +44,16 @@ public class Player : MonoBehaviour {
         moveDirection = transform.TransformDirection(moveDirection);
         moveDirection *= movementSpeed;
 
+   
+
         controller.transform.Rotate(new Vector3(0,Input.GetAxis("Mouse X"),0) * turnSpeed * Time.deltaTime);
 
         isGrounded = Physics.Raycast(controller.transform.position, Vector3.down, 1.1f);
+        if (Input.GetKey(KeyCode.W))
+        {
+            //add delay
+            playerAudio.PlayOneShot(steps);
+        }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded) {
             verticalVelocity = jumpSpeed;
         }
@@ -54,6 +68,8 @@ public class Player : MonoBehaviour {
     
     public void Damage(int damageTaken) {
         gController.health -= damageTaken;
+        playerAudio.PlayOneShot(deathsound);
+   
         if (gController.health <= 0) {
             // you loose lmao
         }

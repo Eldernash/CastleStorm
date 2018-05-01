@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CastleStorm", "CastleStorm.csproj", "{4A114F10-501F-D9D3-164C-DEEBEAA26F6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CastleStorm.Plugins", "CastleStorm.Plugins.csproj", "{251B7D57-F5F5-8D0D-FDA0-C32F13F206BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CastleStorm.Editor.Plugins", "CastleStorm.Editor.Plugins.csproj", "{8D87E85C-7982-A00A-2C24-CFCA5CA835BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{4A114F10-501F-D9D3-164C-DEEBEAA26F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A114F10-501F-D9D3-164C-DEEBEAA26F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A114F10-501F-D9D3-164C-DEEBEAA26F6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{251B7D57-F5F5-8D0D-FDA0-C32F13F206BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{251B7D57-F5F5-8D0D-FDA0-C32F13F206BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{251B7D57-F5F5-8D0D-FDA0-C32F13F206BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{251B7D57-F5F5-8D0D-FDA0-C32F13F206BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D87E85C-7982-A00A-2C24-CFCA5CA835BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D87E85C-7982-A00A-2C24-CFCA5CA835BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D87E85C-7982-A00A-2C24-CFCA5CA835BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D87E85C-7982-A00A-2C24-CFCA5CA835BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

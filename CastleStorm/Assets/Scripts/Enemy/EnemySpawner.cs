@@ -7,11 +7,8 @@ public class EnemySpawner : MonoBehaviour {
     public float spawnTimer = 2;
     public int spawnAmount;
     public GameObject prefab;
-
-    private float timeRemaining;
 	// Use this for initialization
 	void Start () {
-        timeRemaining = spawnTimer;
 	}
 	
 	// Update is called once per frame

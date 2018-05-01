@@ -12,10 +12,6 @@ public class Enemy : MonoBehaviour {
     public float movementSpeed = 1;
     public int health = 1;
     public int damage = 1;
-    public AudioSource enemyAudio;
-    public AudioClip hit;
-    public AudioClip[] deathSounds = new AudioClip[3];
-    public int audioArrayNumber;
 
     public bool attacking = false;
     public float attackInterval = 1;
@@ -27,12 +23,18 @@ public class Enemy : MonoBehaviour {
 
     public GameObject gController;
 
+
+    public AudioSource enemyAudio;
+    public AudioClip hit;
+    public AudioClip[] deathSounds = new AudioClip[3];
+    public int audioArrayNumber;
+
     private Transform target;
     private Animator animator;
     public float timer;
 
     // Use this for initialization
-    void Start () {
+    void Start() {
         enemyAudio = gameObject.GetComponent<AudioSource>();
         timer = attackInterval;
         gController = GameObject.Find("GameController");
@@ -48,9 +50,9 @@ public class Enemy : MonoBehaviour {
         target = primaryTarget;
 
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update() {
         if (target != null) {
             agent.SetDestination(target.position);
         }
@@ -58,7 +60,7 @@ public class Enemy : MonoBehaviour {
         if (agent.remainingDistance > agent.stoppingDistance) {
             controller.Move(agent.desiredVelocity * movementSpeed * Time.deltaTime);
         }
-	}
+    }
 
     public void DetectsSecondary(bool detected) {
         if (detected)
@@ -67,12 +69,13 @@ public class Enemy : MonoBehaviour {
             target = primaryTarget;
     }
 
-    public  void Damage(int damageTaken) {
+    public void Damage(int damageTaken) {
         health -= damageTaken;
         enemyAudio.PlayOneShot(hit);
         if (health <= 0) {
             audioArrayNumber = Random.Range(0, 3);
             gController.GetComponent<GameController>().score++;
+            gController.GetComponent<GameController>().enemiesRemaining--;
             Debug.Log("Hit 'im");
             enemyAudio.PlayOneShot(deathSounds[audioArrayNumber]);
             Destroy(gameObject);

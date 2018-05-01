@@ -19,6 +19,7 @@ public class LoseZone : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (other.tag == "Enemy") {
             controller.life--;
+            controller.enemiesRemaining--;
             Destroy(other.gameObject);
         }
     }

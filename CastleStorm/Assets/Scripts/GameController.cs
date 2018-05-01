@@ -16,17 +16,26 @@ public class GameController : MonoBehaviour {
     public int health = 100;
     public int score = 0;
 
+    public int wave = 1;
+    public float waveTimer = 4.0f;
+    public int enemiesRemaining;
+
     public Text livesText;
     public Text healthText;
     public Text scoreText;
 
     private float timer;
+    private float wTimer;
+
     // Use this for initialization
-    void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    void Start() {
+        timer = spawnInterval;
+        wTimer = waveTimer;
+        enemiesRemaining = spawnAmount;
+    }
+
+    // Update is called once per frame
+    void Update() {
         if (timer <= 0 && spawnAmount > 0) {
             int rando = Random.Range(0, spawnPoints.Length - 1);
             if (spawnPoints[rando] != null) {
@@ -34,6 +43,7 @@ public class GameController : MonoBehaviour {
                 spawnAmount--;
             }
             timer = spawnInterval;
+            wTimer = waveTimer;
         } else {
             timer -= 1 * Time.deltaTime;
         }
@@ -50,5 +60,17 @@ public class GameController : MonoBehaviour {
             healthText.text = health.ToString();
         }
         scoreText.text = score.ToString();
+
+        // waves
+        if (enemiesRemaining <= 0) {
+            if (wTimer <= 0) {
+                wave++;
+                spawnAmount = (wave * 3) + 10;
+                wTimer = waveTimer;
+                enemiesRemaining = spawnAmount;
+            } else {
+                wTimer -= 1 * Time.deltaTime;
+            }
+        }
     }
 }
